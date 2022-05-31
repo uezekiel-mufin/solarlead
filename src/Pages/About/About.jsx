@@ -48,7 +48,7 @@ const About = () => {
         ref={ref}
         transition={{ duration: 1 }}
         variants={squareVariants}
-        initial={{ y: 100, opacity: 0.3 }}
+        initial={{ y: 100 }}
         animate={controls}
         className='about__contact'
       >
@@ -71,8 +71,9 @@ const About = () => {
       </motion.div>
       <motion.div
         ref={ref}
+        transition={{ duration: 1 }}
         variants={squareVariants}
-        initial={{ y: 100, opacity: 0.3 }}
+        initial={{ y: 100 }}
         animate={controls}
         className='about__contact'
       >

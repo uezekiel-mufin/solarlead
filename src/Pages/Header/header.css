@@ -8,7 +8,7 @@
   background-size: 100%;
   opacity: 1;
   line-height: 3.4rem;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 .header__content {
   text-align: center;
@@ -30,8 +30,7 @@
   }
 
   .header__content {
-    margin-top: 60px;
-    margin-bottom: 4rem;
+    margin-top: 10px;
   }
   .header h2 {
     font-size: 1.5rem;

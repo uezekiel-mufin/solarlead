@@ -17,7 +17,7 @@ const Contact = () => {
     }
   }, [controls, inView]);
   const formVariant = {
-    visible: { opacity: 1, x: 0, transition: { duration: 2 } },
+    visible: { y: 0, transition: { duration: 2 } },
   };
   return (
     <div className='contact'>
@@ -33,7 +33,7 @@ const Contact = () => {
         <motion.div
           ref={ref}
           variants={formVariant}
-          initial={{ x: -300, opacity: 0 }}
+          initial={{ y: 100 }}
           animate={controls}
           className='form'
         >
@@ -82,7 +82,7 @@ const Contact = () => {
         <motion.div
           ref={ref}
           variants={formVariant}
-          initial={{ x: 300, opacity: 0 }}
+          initial={{ y: 100 }}
           animate={controls}
           className='address__section'
         >
