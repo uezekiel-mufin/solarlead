@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+.subhead {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
 .form__section {
   margin-top: 3rem;
   display: grid;
@@ -39,12 +44,17 @@
 ul {
   margin: 0;
   padding: 0;
-  gap: 1rem;
+  gap: 3rem;
+}
+
+ul li {
+  margin: 0;
 }
 
 @media only screen and (max-width: 900px) {
   .form__section {
-    margin-top: 3rem;
+    margin: 2rem 2rem;
+
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -58,7 +68,7 @@ ul {
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    margin: 2rem 1rem;
+    margin: 2rem 2rem;
   }
 
   .subhead {

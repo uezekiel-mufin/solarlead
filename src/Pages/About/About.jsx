@@ -7,11 +7,17 @@ import { Button } from "@mui/material";
 const About = () => {
   return (
     <div className='about'>
-      <h3>Who we are and what we do</h3>
+      <h3 className='who'>Who we are and what we do</h3>
       <div className='container'>
         {data.map((item, index) => (
           <div key={index} className='grid'>
-            <div style={{ display: "flex", gap: "0.5rem" }}>
+            <div
+            // style={{
+            //   display: "flex",
+            //   gap: "0.5rem",
+            //   justifyContent: "center",
+            // }}
+            >
               <h2 style={{ color: "#FFA83F", fontSize: "1.5rem" }}>
                 {item.icon}
               </h2>

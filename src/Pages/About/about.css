@@ -11,6 +11,11 @@
   margin-bottom: 3rem;
   text-align: center;
 }
+
+.about h5 {
+  font-weight: 100;
+  font-size: 14px;
+}
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -47,6 +52,9 @@
 
   margin: 0 2rem;
 }
+.who {
+  margin: 0 2rem;
+}
 
 img {
   width: 550px;
@@ -69,7 +77,7 @@ img {
   .container {
     display: flex;
     flex-direction: column;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
   }
   img {
     width: 350px;
@@ -89,7 +97,7 @@ img {
   .about__contact {
     display: flex;
     flex-direction: column;
-    margin: 2rem 5rem;
+    margin: 1rem 5rem;
     background: #ffffffe5;
     box-shadow: 0px 2px 20px #e8e8e8;
     align-items: center;

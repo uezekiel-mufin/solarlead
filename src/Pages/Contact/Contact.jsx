@@ -81,7 +81,7 @@ const Contact = () => {
             <h2>Social Media</h2>
             <ul>
               <li>
-                <GrInstagram style={{ fontSize: "1.5rem", color: "#48DDFE" }} />
+                <GrInstagram style={{ fontSize: "1.5rem", color: "#FB398B" }} />
               </li>
               <li>
                 <FaLinkedin style={{ fontSize: "1.5rem", color: "#48DDFE" }} />
@@ -93,7 +93,7 @@ const Contact = () => {
                 <GrTwitter
                   style={{
                     fontSize: "1.5rem",
-                    color: "#FB398B",
+                    color: "#48DDFE",
                   }}
                 />
               </li>

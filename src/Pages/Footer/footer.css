@@ -36,6 +36,13 @@ span {
 }
 
 @media only screen and (max-width: 900px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+  }
   .footer__middle ul li {
     display: none;
   }
@@ -48,9 +55,7 @@ span {
     display: none;
   }
   .footer__left {
-    font-size: 1.5rem;
-    margin-left: 1rem;
-    display: flex;
-    align-items: flex-end;
+    font-size: 2rem;
+    margin-left: 0;
   }
 }
