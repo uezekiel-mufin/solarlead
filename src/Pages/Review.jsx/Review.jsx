@@ -1,13 +1,35 @@
 import { Avatar } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import "./review.css";
 import reviews from "./reviewData";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Review = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const reviewVariants = {
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+    // hidden: { opacity: 0, y: 1000 },
+  };
+
   return (
     <div className='reviews'>
       <h2 style={{ fontWeight: 700, fontSize: "3rem" }}>Reviews</h2>
-      <div className='review__container'>
+      <motion.div
+        ref={ref}
+        initial={{ y: 300, opacity: 0 }}
+        animate={controls}
+        variants={reviewVariants}
+        className='review__container'
+      >
         {reviews.map((review, index) => (
           <div key={index} className='review'>
             <h5
@@ -28,7 +50,7 @@ const Review = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,23 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./about.css";
 import data from "./aboutData";
 import Engineer from "../../assets/engineers.png";
 import Laptop from "../../assets/laptop.png";
 import { Button } from "@mui/material";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const About = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+  const squareVariants = {
+    visible: { opacity: 1, y: 0 },
+  };
   return (
-    <div className='about'>
+    <motion.div
+      transition={{ duration: 3 }}
+      initial={{ y: 1000 }}
+      animate={{ y: 0 }}
+      className='about'
+    >
       <h3 className='who'>Who we are and what we do</h3>
       <div className='container'>
         {data.map((item, index) => (
           <div key={index} className='grid'>
-            <div
-            // style={{
-            //   display: "flex",
-            //   gap: "0.5rem",
-            //   justifyContent: "center",
-            // }}
-            >
+            <div>
               <h2 style={{ color: "#FFA83F", fontSize: "1.5rem" }}>
                 {item.icon}
               </h2>
@@ -33,7 +44,14 @@ const About = () => {
         <h4>or</h4>
         <h4 style={{ color: "#205097" }}>sales@solarleadfactory.com</h4>
       </div>
-      <div className='about__contact'>
+      <motion.div
+        ref={ref}
+        transition={{ duration: 1 }}
+        variants={squareVariants}
+        initial={{ y: 100, opacity: 0.3 }}
+        animate={controls}
+        className='about__contact'
+      >
         <img src={Engineer} alt='engineers' />
         <div className='contact__description'>
           <h2>SUPERCHARGE YOUR SALES TEAM</h2>
@@ -50,8 +68,14 @@ const About = () => {
             Get Started in Seconds
           </Button>
         </div>
-      </div>
-      <div className='about__contact'>
+      </motion.div>
+      <motion.div
+        ref={ref}
+        variants={squareVariants}
+        initial={{ y: 100, opacity: 0.3 }}
+        animate={controls}
+        className='about__contact'
+      >
         <div className='contact__description'>
           <h2>SUPERCHARGE YOUR TRAFFIC REVENUE</h2>
           <h5>
@@ -67,8 +91,8 @@ const About = () => {
           </Button>
         </div>
         <img src={Laptop} alt='engineers' />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

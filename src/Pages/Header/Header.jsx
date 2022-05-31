@@ -1,11 +1,16 @@
 import React from "react";
 import "./header.css";
 import { Button } from "@mui/material";
-import solar from "../../assets/solar panel.avif";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <div className='header'>
+    <motion.div
+      transition={{ duration: 2 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className='header'
+    >
       <div className='header__content'>
         <h2>UNLOCKING CONSUMER DEMAND IN</h2>
         <h2>SOLAR POWER</h2>
@@ -14,7 +19,7 @@ const Header = () => {
           Development
         </h2>
         <div className='btn'>
-          <button
+          <Button
             variant='contained'
             style={{
               margin: "0 0.5rem",
@@ -25,8 +30,8 @@ const Header = () => {
             }}
           >
             Get Started
-          </button>
-          <button
+          </Button>
+          <Button
             variant='contained'
             style={{
               borderRadius: "1rem",
@@ -36,10 +41,10 @@ const Header = () => {
             }}
           >
             Affiliate Program
-          </button>
+          </Button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
