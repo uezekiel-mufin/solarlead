@@ -4,6 +4,7 @@ import Footer from "./Pages/Footer/Footer";
 import Header from "./Pages/Header/Header";
 import Navbar from "./Pages/Navbar/Navbar";
 import Review from "./Pages/Review.jsx/Review";
+// import "./app.css";
 
 function App() {
   return (

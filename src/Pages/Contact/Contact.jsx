@@ -11,7 +11,7 @@ const Contact = () => {
       <h2 style={{ fontWeight: 700, fontSize: "2rem" }}>
         Get in Touch With Us
       </h2>
-      <h5>
+      <h5 className='subhead'>
         We would love to hear from you and assist you in any way possible in
         getting started
       </h5>

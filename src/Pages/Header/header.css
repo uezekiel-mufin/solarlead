@@ -12,7 +12,9 @@
   opacity: 1;
   line-height: 3.4rem;
 }
-
+.header__content {
+  text-align: center;
+}
 .header h2 {
   font-size: 3rem;
   color: #ffffff;

@@ -11,6 +11,7 @@ const Navbar = () => {
   return (
     <>
       <AppBar
+        position='static'
         style={{
           background: "#2D2D2D",
           boxShadow: " 0px 1px 4px rgba(0, 0, 0, 0.12)",
@@ -21,6 +22,9 @@ const Navbar = () => {
             display: "flex",
             justifyContent: "space-between",
             margin: "1rem 0",
+            // marginBottom: "94px",
+            paddingRight: "1rem",
+            // background: "#2D2D2D",
           }}
         >
           <div className='toolbar'>
@@ -92,35 +96,11 @@ const Navbar = () => {
                 <li>About</li>
                 <li>Contact</li>
               </ul>
-              {/* <Button
-                size='small'
-                color='secondary'
-                variant='contained'
-                style={{
-                  margin: "2rem 0.5rem",
-                  borderRadius: "1rem",
-                  background: "#FFA83F",
-                }}
-              >
-                Get Started
-              </Button>
-              <Button
-                size='small'
-                color='secondary'
-                variant='outlined'
-                style={{
-                  borderRadius: "1rem",
-                  background: "#FFA83F",
-                  color: "white",
-                }}
-              >
-                Affiliate Program
-              </Button> */}
             </Drawer>
           </div>
         </Toolbar>
       </AppBar>
-      <Toolbar />
+      {/* <Toolbar /> */}
     </>
   );
 };

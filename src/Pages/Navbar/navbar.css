@@ -7,7 +7,7 @@
 .toolbar__right {
   display: flex;
   justify-content: space-between;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
 }
 
 ul {
